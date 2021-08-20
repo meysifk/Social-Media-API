@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-08-20T23:59:52+07:00">2021-08-20T23:59:52+07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-08-21T00:53:24+07:00">2021-08-21T00:53:24+07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -2055,7 +2055,7 @@
 
             
 
-            <code class="ruby">    	@name = params[&quot;name&quot;]? params[&quot;name&quot;].downcase : nil</code>
+            <code class="ruby">    	@name = params[&quot;name&quot;] ? params[&quot;name&quot;].downcase : nil</code>
           </li>
         </div>
       
@@ -2231,7 +2231,7 @@
 
             
 
-            <code class="ruby">		return convert_to_array(rawData)[0] if rawData.any? nil</code>
+            <code class="ruby">		return convert_to_array(rawData)[0] if rawData.any? </code>
           </li>
         </div>
       
@@ -2242,7 +2242,7 @@
 
             
 
-            <code class="ruby">	end</code>
+            <code class="ruby">		nil</code>
           </li>
         </div>
       
@@ -2253,18 +2253,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">	end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="27">
+            
             
 
             
 
-            <code class="ruby">	def self.find_by_id(id)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2275,7 +2275,7 @@
 
             
 
-            <code class="ruby">		client = create_db_client</code>
+            <code class="ruby">	def self.find_by_id(id)</code>
           </li>
         </div>
       
@@ -2286,7 +2286,7 @@
 
             
 
-            <code class="ruby">		rawData = client.query(&quot;SELECT * FROM Hashtags WHERE id = #{id}&quot;)</code>
+            <code class="ruby">		client = create_db_client</code>
           </li>
         </div>
       
@@ -2297,18 +2297,18 @@
 
             
 
-            <code class="ruby">		convert_to_array(rawData)[0]</code>
+            <code class="ruby">		rawData = client.query(&quot;SELECT * FROM Hashtags WHERE id = #{id}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="31">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">	end</code>
+            
+
+            <code class="ruby">		convert_to_array(rawData)[0]</code>
           </li>
         </div>
       
@@ -2319,18 +2319,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">	end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="33">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="33">
+            
             
 
             
 
-            <code class="ruby">	def self.convert_to_array(rawData)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2341,7 +2341,7 @@
 
             
 
-            <code class="ruby">		hashtags = Array.new</code>
+            <code class="ruby">	def self.convert_to_array(rawData)</code>
           </li>
         </div>
       
@@ -2352,7 +2352,7 @@
 
             
 
-            <code class="ruby">		rawData.each do |data|</code>
+            <code class="ruby">		hashtags = Array.new</code>
           </li>
         </div>
       
@@ -2363,7 +2363,7 @@
 
             
 
-            <code class="ruby">		  hashtag = Hashtag.new(data)</code>
+            <code class="ruby">		rawData.each do |data|</code>
           </li>
         </div>
       
@@ -2374,12 +2374,23 @@
 
             
 
+            <code class="ruby">		  hashtag = Hashtag.new(data)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">		  hashtags &lt;&lt; hashtag</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -2390,7 +2401,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
+          <li class="covered" data-hits="1" data-linenumber="40">
             <span class="hits">1</span>
             
 
@@ -2401,7 +2412,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
@@ -2412,24 +2423,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">	def self.find_by_trend</code>
           </li>
         </div>
       
@@ -2440,7 +2440,7 @@
 
             
 
-            <code class="ruby">		client = create_db_client</code>
+            <code class="ruby">	def self.find_by_trend</code>
           </li>
         </div>
       
@@ -2451,7 +2451,7 @@
 
             
 
-            <code class="ruby">		time = Time.now - 60 * 60 * 24</code>
+            <code class="ruby">		client = create_db_client</code>
           </li>
         </div>
       
@@ -2462,7 +2462,7 @@
 
             
 
-            <code class="ruby">		rawData = client.query(&quot;SELECT hashtag_id, SUM(number) total FROM ( SELECT hashtag_id, COUNT(hashtag_id) AS number FROM Post_Hashtags WHERE created_at &gt; &#39;#{time}&#39; GROUP BY hashtag_id UNION ALL SELECT hashtag_id, COUNT(hashtag_id) AS number from Comment_Hashtags WHERE created_at &gt; &#39;#{time}&#39; GROUP BY hashtag_id) h GROUP BY hashtag_id ORDER BY total DESC LIMIT 5&quot;)</code>
+            <code class="ruby">		time = Time.now - 60 * 60 * 24</code>
           </li>
         </div>
       
@@ -2473,7 +2473,7 @@
 
             
 
-            <code class="ruby">		hashtags = Array.new</code>
+            <code class="ruby">		rawData = client.query(&quot;SELECT hashtag_id, SUM(number) total FROM ( SELECT hashtag_id, COUNT(hashtag_id) AS number FROM Post_Hashtags WHERE created_at &gt; &#39;#{time}&#39; GROUP BY hashtag_id UNION ALL SELECT hashtag_id, COUNT(hashtag_id) AS number from Comment_Hashtags WHERE created_at &gt; &#39;#{time}&#39; GROUP BY hashtag_id) h GROUP BY hashtag_id ORDER BY total DESC LIMIT 5&quot;)</code>
           </li>
         </div>
       
@@ -2484,18 +2484,18 @@
 
             
 
-            <code class="ruby">		for data in rawData do</code>
+            <code class="ruby">		hashtags = Array.new</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="48">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="1" data-linenumber="48">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">			hashtag = Hashtag.find_by_id(data[&quot;hashtag_id&quot;])</code>
+            <code class="ruby">		for data in rawData do</code>
           </li>
         </div>
       
@@ -2506,12 +2506,23 @@
 
             
 
+            <code class="ruby">			hashtag = Hashtag.find_by_id(data[&quot;hashtag_id&quot;])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="50">
+            <span class="hits">5</span>
+            
+
+            
+
             <code class="ruby">			hashtags &lt;&lt; hashtag</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
@@ -2522,7 +2533,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="51">
+          <li class="covered" data-hits="6" data-linenumber="52">
             <span class="hits">6</span>
             
 
@@ -2533,7 +2544,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -2544,7 +2555,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="54">
             
             
 
@@ -2555,7 +2566,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
+          <li class="covered" data-hits="1" data-linenumber="55">
             <span class="hits">1</span>
             
 
@@ -2566,7 +2577,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -2577,7 +2588,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
+          <li class="covered" data-hits="1" data-linenumber="57">
             <span class="hits">1</span>
             
 
@@ -2588,7 +2599,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
+          <li class="never" data-hits="" data-linenumber="58">
             
             
 
@@ -2599,7 +2610,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="59">
             
             
 
@@ -2610,7 +2621,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="59">
+          <li class="covered" data-hits="1" data-linenumber="60">
             <span class="hits">1</span>
             
 
@@ -2621,7 +2632,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="60">
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
@@ -2632,7 +2643,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="61">
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
@@ -2643,7 +2654,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="62">
+          <li class="covered" data-hits="1" data-linenumber="63">
             <span class="hits">1</span>
             
 
@@ -2654,7 +2665,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="63">
+          <li class="covered" data-hits="2" data-linenumber="64">
             <span class="hits">2</span>
             
 
@@ -2665,7 +2676,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="64">
+          <li class="covered" data-hits="1" data-linenumber="65">
             <span class="hits">1</span>
             
 
@@ -2676,7 +2687,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="never" data-hits="" data-linenumber="66">
             
             
 
@@ -2687,24 +2698,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="66">
+          <li class="never" data-hits="" data-linenumber="67">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="67">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">	def exist?</code>
           </li>
         </div>
       
@@ -2715,7 +2715,7 @@
 
             
 
-            <code class="ruby">		client = create_db_client</code>
+            <code class="ruby">	def exist?</code>
           </li>
         </div>
       
@@ -2726,7 +2726,7 @@
 
             
 
-            <code class="ruby">		exist = client.query(&quot;SELECT id FROM Hashtags WHERE name = &#39;#{name}&#39;&quot;)</code>
+            <code class="ruby">		client = create_db_client</code>
           </li>
         </div>
       
@@ -2737,7 +2737,7 @@
 
             
 
-            <code class="ruby">		return true if exist.any?</code>
+            <code class="ruby">		exist = client.query(&quot;SELECT id FROM Hashtags WHERE name = &#39;#{name}&#39;&quot;)</code>
           </li>
         </div>
       
@@ -2748,18 +2748,18 @@
 
             
 
-            <code class="ruby">		false</code>
+            <code class="ruby">		return true if exist.any?</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="72">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="72">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">	end</code>
+            
+
+            <code class="ruby">		false</code>
           </li>
         </div>
       
@@ -2770,7 +2770,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">	end</code>
           </li>
         </div>
       

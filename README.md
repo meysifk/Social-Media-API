@@ -21,17 +21,20 @@ The final project of intermediate-class is social media
 # Project Structure
 ```
 |_ controllers
+|_ coverage
 |_ db
 | |_ query.sql     
 | |_ mysql_connector.rb  
+|_ documentations
+| |_ ERD.png 
+| |_ postman_collections.json
 |_ models
 |_ public
 | |_ assets
-|_ documentations
-| |_ ERD.png   
 |_ spec
 | |_controllers
 | |_models
+| |_storage
 | |_spec_helper
 |_ .rspec
 |_ Gemfile       
@@ -65,8 +68,8 @@ export DB_USERNAME=<YOUR_USERNAME>
 export DB_PASSWORD=<YOUR_PASSWORD>
 ```
 
-4. Run ruby server.rb. To see the api enter localhost:4567/`<ENDPOINT>` in your [Postman](https://www.postman.com/downloads/).
-5. To test, Run `rspec -f d` to run all the specs.
+4. Run ruby server.rb. To see the API enter localhost:4567/`<ENDPOINT>` in your [Postman](https://www.postman.com/downloads/).
+5. To test, Run `rspec -fd spec` to run all the specs.
 
 # ERD
-<img src="documentations/ERD.png" width=700>
+<img src="documentations/ERD.png" width=1000>

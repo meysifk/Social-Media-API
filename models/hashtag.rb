@@ -5,7 +5,7 @@ class Hashtag
 
 	def initialize(params)
 		@id = params["id"]
-    	@name = params["name"]? params["name"].downcase : nil
+    	@name = params["name"] ? params["name"].downcase : nil
 	end
 
 	def save
@@ -21,7 +21,8 @@ class Hashtag
 	def self.find_by_name(name)
 		client = create_db_client
 		rawData = client.query("SELECT id FROM Hashtags WHERE name = '#{name}'")
-		return convert_to_array(rawData)[0] if rawData.any? nil
+		return convert_to_array(rawData)[0] if rawData.any? 
+		nil
 	end
 
 	def self.find_by_id(id)
@@ -70,5 +71,4 @@ class Hashtag
 		return true if exist.any?
 		false
 	end
-
 end
