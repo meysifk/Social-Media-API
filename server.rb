@@ -4,6 +4,7 @@ require 'json'
 require './controllers/user_controller'
 require './controllers/hashtag_controller'
 require './controllers/post_controller'
+require './controllers/comment_controller'
 
 namespace '/api' do 
 
@@ -15,12 +16,12 @@ namespace '/api' do
         if params["username"].nil? 
             halt 400, { 
             status:'fail',
-            message:'please enter username' }.to_json
+            message:'please submit username' }.to_json
         end
         if params["email"].nil?
             halt 400, { 
             status:'fail',
-            message:'please enter email' }.to_json
+            message:'please submit email' }.to_json
         end
         
         user_id = UserController.add_user(params)
@@ -73,6 +74,40 @@ namespace '/api' do
 
     get '/post/:hashtag_name' do
         PostController.get_by_hashtag_name(params).to_json
+    end
+
+    post '/comment/create' do
+        if params["content"].nil? 
+          halt 400, { 
+            status:'fail',
+            message:'failed to add comment, please submit content' }.to_json
+        end
+        if params["content"].length > 1000
+          halt 400, { 
+            status:'fail',
+            message:'failed to add comment, Maximum limit of a text is 1000 characters' }.to_json
+        end
+        if params["user_id"].nil?
+          halt 400, { 
+            status:'fail',
+            message:'failed to add comment, please submit user_id' }.to_json
+        end
+        if params["post_id"].nil?
+          halt 400, { 
+            status:'fail',
+            message:'failed to add comment, please submit post_id' }.to_json
+        end
+
+        comment_id = CommentController.add_comment(params)
+        if comment_id
+          halt 200, { 
+            status:'success',
+            message:'successfully added comment' }.to_json
+        else
+          halt 400, { 
+            status:'fail',
+            message:'failed to add comment' }.to_json
+        end
     end
 end
 

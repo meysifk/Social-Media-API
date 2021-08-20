@@ -21,8 +21,7 @@ class Hashtag
 	def self.find_by_name(name)
 		client = create_db_client
 		rawData = client.query("SELECT id FROM Hashtags WHERE name = '#{name}'")
-		return convert_to_array(rawData)[0] if rawData.any? 
-		nil
+		return convert_to_array(rawData)[0] if rawData.any? nil
 	end
 
 	def self.find_by_id(id)
@@ -43,7 +42,7 @@ class Hashtag
 	def self.find_by_trend
 		client = create_db_client
 		time = Time.now - 60 * 60 * 24
-		rawData = client.query("SELECT hashtag_id, SUM(number) total FROM ( SELECT hashtag_id, COUNT(hashtag_id) AS number FROM Post_Hashtags WHERE created_at > '#{time}' GROUP BY hashtag_id UNION ALL SELECT hashtag_id, COUNT(hashtag_id) AS number from Comment_Hashtags WHERE created_at > '#{time}' GROUP BY hashtag_id) t GROUP BY hashtag_id ORDER BY total DECS LIMIT 5")
+		rawData = client.query("SELECT hashtag_id, SUM(number) total FROM ( SELECT hashtag_id, COUNT(hashtag_id) AS number FROM Post_Hashtags WHERE created_at > '#{time}' GROUP BY hashtag_id UNION ALL SELECT hashtag_id, COUNT(hashtag_id) AS number from Comment_Hashtags WHERE created_at > '#{time}' GROUP BY hashtag_id) h GROUP BY hashtag_id ORDER BY total DESC LIMIT 5")
 		hashtags = Array.new
 		for data in rawData do
 			hashtag = Hashtag.find_by_id(data["hashtag_id"])

@@ -158,7 +158,7 @@ describe Hashtag do
                     }
                 ]
                 mock_client = double
-                query = "SELECT hashtag_id, SUM(number) total FROM ( SELECT hashtag_id, COUNT(hashtag_id) AS number FROM Post_Hashtags WHERE created_at > '#{time}' GROUP BY hashtag_id UNION ALL SELECT hashtag_id, COUNT(hashtag_id) AS number from Comment_Hashtags WHERE created_at > '#{time}' GROUP BY hashtag_id) t GROUP BY hashtag_id ORDER BY total DECS LIMIT 5"
+                query = "SELECT hashtag_id, SUM(number) total FROM ( SELECT hashtag_id, COUNT(hashtag_id) AS number FROM Post_Hashtags WHERE created_at > '#{time}' GROUP BY hashtag_id UNION ALL SELECT hashtag_id, COUNT(hashtag_id) AS number from Comment_Hashtags WHERE created_at > '#{time}' GROUP BY hashtag_id) h GROUP BY hashtag_id ORDER BY total DESC LIMIT 5"
                 allow(Mysql2::Client).to receive(:new).and_return(mock_client)
                 expect(mock_client).to receive(:query).with(query)
                 allow(mock_client).to receive(:query).with(query).and_return(rawData_result_id)

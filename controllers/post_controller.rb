@@ -21,7 +21,6 @@ class PostController
 	def self.get_by_hashtag_name(params)
 		hashtag_name = params["hashtag_name"].downcase
         hashtag_id = Hashtag.find_by_name(hashtag_name)
-
         return Post.find_by_hashtag_id(hashtag_id.id) unless hashtag_id.nil?
 	end
 end
