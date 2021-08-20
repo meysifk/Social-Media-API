@@ -42,7 +42,7 @@ The final project of intermediate-class is social media
 
 # Instructions
 1. Install the needed gem
-```install bundler```
+```gem install bundler```
 
 Or install it yourself as: 
 ```

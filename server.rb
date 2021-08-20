@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/namespace'
 require 'json'
 require './controllers/user_controller'
+require './controllers/hashtag_controller'
 
 namespace '/api' do 
 
@@ -32,6 +33,10 @@ namespace '/api' do
                 status:'fail',
                 message:'failed to add user' }.to_json
         end
+    end
+
+    get '/hashtag/trend' do
+        HashtagController.get_by_trend.to_json
     end
 end
 
