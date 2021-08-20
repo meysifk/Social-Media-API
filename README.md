@@ -69,4 +69,4 @@ export DB_PASSWORD=<YOUR_PASSWORD>
 5. To test, Run `rspec -f d` to run all the specs.
 
 # ERD
-<img src="docs/ERD.png" width=700>
+<img src="documentations/ERD.png" width=700>
