@@ -86,7 +86,7 @@ In postman I use some global variable. Please make sure you provide it in your p
 ## Postman Global variables
 
 | Name | Initial Value | Type |
-| ------ | ------ |
+| ------ | ------ | ------ |
 | base_url | http://34.93.224.59:4567 | string |
 | user_id | 1 | int |
 | hashtag | hashtag | string |
