@@ -62,7 +62,7 @@ gem install simplecov
 gem install securerandom
 ```
 
-2. Login to mysql using the username and password. Copy and paste `query.sql` contents to mysql.
+2. Login to mysql using the username and password. Copy and paste <a href="documentations/query.sql">query.sql</a> contents to mysql.
 3. Export the environment variables in terminal. Notes: DB_HOST can use `localhost` value for your personal environment.
 
 ```
@@ -75,14 +75,11 @@ export DB_PASSWORD=<YOUR_PASSWORD>
 4. Run ruby server.rb. To see the API enter localhost:4567/`<ENDPOINT>` in your [Postman](https://www.postman.com/downloads/).
 5. To test, Run `rspec -fd spec` to run all the specs.
 
-# Development
-
-## API Documentation
+# API Documentation
 
 You can easily import it from <a href="documentations/postman/Social-Media-API.postman_collection.json">Postman Collection File</a>
 
-In postman I use some global variable. Please make sure you provide it in your postman.
-
+In postman I use some global variable. Please make sure you provide it in your [Postman](https://www.postman.com/downloads/).
 ## Postman Global variables
 
 | Name | Initial Value | Type |
