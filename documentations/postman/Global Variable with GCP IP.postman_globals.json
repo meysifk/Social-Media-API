@@ -1,0 +1,29 @@
+{
+	"id": "b24c0f86-3aab-4a99-80b5-214c7bf14ee0",
+	"values": [
+		{
+			"key": "base_url",
+			"value": "http://34.93.224.59:4567",
+			"enabled": true
+		},
+		{
+			"key": "user_id",
+			"value": "1",
+			"enabled": true
+		},
+		{
+			"key": "hashtag",
+			"value": "hashtag",
+			"enabled": true
+		},
+		{
+			"key": "post_id",
+			"value": "1",
+			"enabled": true
+		}
+	],
+	"name": "My Workspace Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2021-08-21T04:56:14.060Z",
+	"_postman_exported_using": "Postman/8.10.0"
+}
