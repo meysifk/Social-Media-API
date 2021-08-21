@@ -22,12 +22,12 @@ The final project of intermediate-class is social media
 ```
 |_ controllers
 |_ coverage
-|_ db
-| |_ query.sql     
+|_ db  
 | |_ mysql_connector.rb  
 |_ documentations
 | |_ ERD.png 
-| |_ postman_collections.json
+| |_ postman
+| |_ query.sql   
 |_ models
 |_ public
 | |_ assets
@@ -44,6 +44,10 @@ The final project of intermediate-class is social media
 ```
 
 # Instructions
+
+## Prerequisite
+install Ruby, for developing this app I use ruby 3.0
+
 1. Install the needed gem
 ```gem install bundler```
 
@@ -70,6 +74,24 @@ export DB_PASSWORD=<YOUR_PASSWORD>
 
 4. Run ruby server.rb. To see the API enter localhost:4567/`<ENDPOINT>` in your [Postman](https://www.postman.com/downloads/).
 5. To test, Run `rspec -fd spec` to run all the specs.
+
+# Development
+
+## API Documentation
+
+You can easily import it from <a href="documentations/postman/Social-Media-API.postman_collection.json">Postman Collection File</a>
+
+In postman I use some global variable. Please make sure you provide it in your postman.
+
+## Postman Global variables
+
+| Name | Initial Value | Type |
+| ------ | ------ |
+| base_url | http://34.93.224.59:4567 | string |
+| user_id | 1 | int |
+| hashtag | hashtag | string |
+| post_id | 1 | int |
+
 
 # ERD
 <img src="documentations/ERD.png" width=1000>
