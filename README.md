@@ -46,7 +46,7 @@ The final project of intermediate-class is social media
 # Instructions
 
 ## Prerequisite
-install Ruby, for developing this app I use ruby 3.0
+install Ruby, for developing this app I use [ruby](https://www.ruby-lang.org/en/downloads/) 3.0
 
 1. Install the needed gem
 ```gem install bundler```
@@ -62,7 +62,7 @@ gem install simplecov
 gem install securerandom
 ```
 
-2. Login to mysql using the username and password. Copy and paste <a href="documentations/query.sql">query.sql</a> contents to mysql.
+2. Login to mysql using the username and password. Copy and paste `<a href="documentations/query.sql">query.sql</a>` contents to mysql.
 3. Export the environment variables in terminal. Notes: DB_HOST can use `localhost` value for your personal environment.
 
 ```
