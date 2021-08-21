@@ -1,0 +1,16 @@
+
+[Unit]
+Description=Sinatra application
+
+[Service]
+User=gbe01090
+WorkingDirectory=/home/gbe01090/social-media-api
+ExecStart=/home/gbe01090/.rbenv/shims/ruby server.rb
+Restart=on-failure
+Environment="DB_HOST=localhost"
+Environment="DB_USERNAME=root"
+Environment="DB_PASSWORD="
+Environment="DB_NAME=social_media_db"
+
+[Install]
+WantedBy=multi-user.target
