@@ -16,7 +16,7 @@ The final project of intermediate-class is social media
     A comment can contain hashtag(s)
 7. A hashtag occurrence in a comment is counted in trending hashtags calculation
     attach things to a post
-    Three kinds of attachment are allowed: pictures (jpg, png, gif), video (mp4), and file (any other extensions outside of pictures and videos)
+8. Three kinds of attachment are allowed: pictures (jpg, png, gif), video (mp4), and file (any other extensions outside of pictures and videos)
 
 # Project Structure
 ```
